@@ -1,0 +1,144 @@
+.loginWrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: radial-gradient(circle at top, #0b1220, #05070f);
+    overflow: hidden;
+    position: relative;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* glowing background blobs */
+.glowOrb,
+.glowOrb2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    filter: blur(120px);
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.glowOrb {
+    background: #4f46e5;
+    top: -100px;
+    left: -80px;
+}
+
+.glowOrb2 {
+    background: #06b6d4;
+    bottom: -120px;
+    right: -100px;
+}
+
+/* CARD */
+.loginCard {
+    width: 420px;
+    padding: 40px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+
+    color: white;
+    text-align: center;
+
+    z-index: 2;
+
+    animation: fadeIn 0.6s ease;
+}
+
+/* HEADER */
+.header h1 {
+    font-size: 28px;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* BADGE */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 12px;
+    padding: 6px 12px;
+
+    border-radius: 50px;
+
+    background: rgba(99, 102, 241, 0.2);
+    color: #a5b4fc;
+
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+.googleBtn {
+    width: 100%;
+    padding: 14px 18px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #ffffff, #e2e8f0);
+    color: #111;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.googleBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
+}
+
+/* FOOTER */
+.footerText {
+    margin-top: 18px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .loginCard {
+        width: 90%;
+        padding: 30px;
+    }
+}
